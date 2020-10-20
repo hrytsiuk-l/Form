@@ -3,38 +3,33 @@
   <head>
     <meta charset="UTF-8"/> <!--кодування -->
     <meta name="viewport" content="width-device-width, initial-scale=1,0"/>
-      <!--Це дає вказівки браузеру про те,
-      як керувати розмірами сторінки та масштабуванням.
-      (задає  ширину та вікно перегляду)-->
       <title>Survey Form</title>
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="styles/style.css">
   </head>
 
     <body>
       <header class="header">
-      <h1 id="title">freeCodeCamp Survey Form</h1>
-      <p id="description">Thank you for taking the time
-        to help us improve the platform </p>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
       </header>
 
       <form id="survey-form">
         <div class="form-group">
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" 
-            placeholder="Enter your name"><br>
+          <label for="name" id="name-label">Name:</label><br>
+          <input type="text" id="name" placeholder="Enter your name" required>
+          <br>
         </div>
 
         <div class="form-group">
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="Email"
-            placeholder="Enter your email"><br>
+          <label for="email" id="email-label">Email:</label><br>
+          <input type="email" id="email" name="Email" placeholder="Enter your email" required>
+          <br>
         </div>
 
         <div class="form-group">
-          <label for="number">Age:</label><br>
-          <input type="number" id="number"
-            name="Age" min="15"max="100"
-            placeholder="Age"><br>
+          <label for="number" id="number-label">Age:</label><br>
+          <input type="number" id="number" name="Age" min="15"max="100" placeholder="Age">
+          <br>
         </div>
 
         <div class="form-group">
@@ -68,62 +63,51 @@
             <p>What is your favorite feature of freeCodeCamp?</p>
               <label for="dropdown"></label>
               <select id="dropdown" name="dropdown">
-              <!--A disabled option-->
-              <option disabled selected value="non click">Select an option</option>
-              <option value="Challenges">Challenges</option>
-              <option value="Projects">Projects</option>
-              <option value="Community">Community</option>
-              <option value="Open Source">Open Source</option>
-              <option value="Other">Other</option>
-            </select>
+                <!--A disabled option-->
+                <option disabled selected value="non click">Select an option</option>
+                <option value="Challenges">Challenges</option>
+                <option value="Projects">Projects</option>
+                <option value="Community">Community</option>
+                <option value="Open Source">Open Source</option>
+                <option value="Other">Other</option>
+              </select>
           </div>
         </div>
 
         <div class="form-group">
           <p>What would you like to see improved? (Check all that apply)</p>
 
-            <input type="checkbox" id="improved1" name="improved1" 
-            value="Front-end Projects">
+            <input type="checkbox" id="improved1" name="improved1" value="Front-end Projects">
             <label for="improved1"> Front-end Projects</label><br>
 
-            <input type="checkbox" id="improved2" name="improved2" 
-            value="Back-end Projects">
+            <input type="checkbox" id="improved2" name="improved2" value="Back-end Projects">
             <label for="improved2"> Back-end Projects</label><br>
 
-            <input type="checkbox" id="improved3" name="improved3" 
-            value="Data Visualization">
+            <input type="checkbox" id="improved3" name="improved3" value="Data Visualization">
             <label for="improved3"> Data Visualization</label><br>
 
-            <input type="checkbox" id="improved4" name="improved4"
-            value="Challenges">
+            <input type="checkbox" id="improved4" name="improved4" value="Challenges">
             <label for="improved4"> Challenges</label><br>
 
-            <input type="checkbox" id="improved5" name="improved5" 
-            value="Open Source Community">
+            <input type="checkbox" id="improved5" name="improved5" value="Open Source Community">
             <label for="improved5">Open Source Community</label><br>
 
-            <input type="checkbox" id="improved6" name="improved6" 
-            value="Gitter help rooms">
+            <input type="checkbox" id="improved6" name="improved6" value="Gitter help rooms">
             <label for="improved6">Gitter help rooms</label><br>
 
-            <input type="checkbox" id="improved7" name="improved7" 
-            value="Videos">
+            <input type="checkbox" id="improved7" name="improved7" value="Videos">
             <label for="improved7">Videos</label><br>
 
-            <input type="checkbox" id="improved8" name="improved8" 
-            value="City Meetups">
+            <input type="checkbox" id="improved8" name="improved8" value="City Meetups">
             <label for="improved8">City Meetups</label><br>
 
-            <input type="checkbox" id="improved9" name="improved9" 
-            value="Wiki">
+            <input type="checkbox" id="improved9" name="improved9" value="Wiki">
             <label for="improved9">Wiki</label><br>
 
-            <input type="checkbox" id="improved10" name="improved10" 
-            value="Forum">
+            <input type="checkbox" id="improved10" name="improved10" value="Forum">
             <label for="improved10">Forum</label><br>
 
-            <input type="checkbox" id="improved11" name="improved11" 
-            value="Additional Courses">
+            <input type="checkbox" id="improved11" name="improved11" value="Additional Courses">
             <label for="improved11">Additional Courses</label><br>
         </div>
 
@@ -135,8 +119,10 @@
            <br>
 
         <div class="button">
-          <button type="submit">Submit</button> 
+          <button type="submit" id="submit">Submit</button> 
         </div>
       </form>
     </body>
 </html>
+
+
